@@ -1,9 +1,9 @@
 import hashlib
 
 
-hash_value=input("Hash değerini giriniz=")
+hash_value=input("Enter the hash value =")
 
-dosya=open("C:\\Users\\User\\Desktop\\pasword.txt","r")
+dosya=open("C:\\Users\\User\\Desktop\\pasword.txt","r")#Create a file of frequently used passwords in plain text.
 
 while True:
     for text in dosya:
@@ -23,19 +23,19 @@ while True:
         hash_sha_512=hash3.hexdigest()
         
         if hash_md_5==hash_value:
-            print(f"md-5 ile şifrelenmiş.Şifrelenmemiş metin={text}")
+            print(f"Encrypted with md-5. Unencrypted text={text}")
             break
     
         elif hash_sha_1==hash_value:
-            print(f"sha-1 ile şifrelenmiş.Şifrelenmemiş metin={text}")
+            print(f"Encrypted with sha-1. Unencrypted text={text}")
             break
 
         elif hash_sha_256==hash_value:
-            print(f"Sha-256 ile şifrelenmiştir.Şifrelenmemiş metin={text}")
+            print(f"Encrypted with Sha-256. Unencrypted text={text}")
             break
 
         elif hash_sha_512==hash_value:
-            print(f"Sha-512 ile şifrelenmiştir.Şifrelenmemiş metin={text}")
+            print(f"Encrypted with Sha-512. Unencrypted text={text}")
             break
     break
 
